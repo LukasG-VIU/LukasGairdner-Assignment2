@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<header class="fixed top-0 w-full z-50 p-4">
+  <h1 class="text-xl font-bold text-center">Silver Coin Catalog</h1>
+</header>
+
+<main class="pt-24 px-6 max-w-6xl mx-auto">
+
+  <!-- Brief Description -->
+  <section class="mb-8">
+    <p class="text-[var(text-muted)]">A detailed look at this coin, including specifications and history.</p>
+  </section>
+
+  <!-- Image Carousel -->
+  <section class="grid md:grid-cols-2 gap-6 mb-12">
+    <img src="images/1921.jpg" alt="Coin front" class="rounded-xl">
+    <img src="images/1921.jpg" alt="Coin back" class="rounded-xl">
+  </section>
+
+  <!-- Specs + Description -->
+  <section class="grid md:grid-cols-2 gap-8">
+
+    <div class="spec-sheet bg-[var(bg-secondary)] p-4 rounded-xl">
+      <ul class="space-y-2">
+        <li><strong>Year:</strong> 1921</li>
+        <li><strong>Material:</strong> Silver</li>
+        <li><strong>Weight:</strong> 26.73g</li>
+        <li><strong>Diameter:</strong> 38.1mm</li>
+        <li><strong>Mint:</strong> Philadelphia</li>
+      </ul>
+    </div>
+
+    <div class="long-desc bg-[var(bg-secondary)] p-4 rounded-xl">
+      <p>
+        The 1921 Morgan Dollar was the final year of issue and represents an important transition in U.S. coinage history...
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="mt-20 p-6 text-center text-sm text-[var(text-muted)]">
+  © 2025 Lukas – Coin Catalog Project
+</footer>
+
+</body>
+</html>
