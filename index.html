@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Design Lab</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A personal catalog of historic silver coins.">
+  <title>Silver Coin Catalog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>This is lab 7 for Web Design</h1>
+
+<header class="fixed top-0 w-full z-50 p-4">
+  <h1 class="text-2xl font-bold text-center">Silver Coin Catalog</h1>
+</header>
+
+<main class="pt-24 px-6">
+
+  <!-- Intro -->
+  <section class="max-w-4xl mx-auto mb-12">
+    <p class="text-lg text-center text-[var(--text-muted)]">
+      This website documents my personal collection of historic silver coins, their origins, and their significance.
+    </p>
+  </section>
+
+  <!-- Horizontal Scroll Section -->
+  <section class="scroll-x mb-16">
+
+    <a href="coin.html?coin=1921" class="coin-card bg-[var(--bg-secondary)] p-4 rounded-xl">
+      <img src="images/image1.jpg" alt="1921 Silver Coin" class="rounded-lg mb-3">
+      <h2 class="font-semibold">1921 Morgan Dollar</h2>
+      <p class="text-sm text-[var(--text-muted)]">United States</p>
+    </a>
+
+    <a href="coin.html?coin=1937" class="coin-card bg-[var(--bg-secondary)] p-4 rounded-xl">
+      <img src="images/image2.jpg" alt="1937 Silver Coin" class="rounded-lg mb-3">
+      <h2 class="font-semibold">1937 Crown</h2>
+      <p class="text-sm text-[var(--text-muted)]">United Kingdom</p>
+    </a>
+
+  </section>
+
+  <!-- Info Blocks -->
+  <section class="space-y-20">
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <p>Coin collecting is the hobby of acquiring and studying coins from different cultures and eras.</p>
+      <img src="images/image3.jpg" alt="Coin collecting" class="rounded-xl">
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <img src="images/image4.jpg" alt="Why collect coins" class="rounded-xl">
+      <p>People collect coins for historical value, artistic design, and precious metal content.</p>
+    </div>
+
+    <!-- Repeat alternating layout until 6 total blocks -->
+
+  </section>
+
+</main>
+
+<footer class="mt-20 p-6 text-center text-sm text-[var(--text-muted)]">
+  © 2025 Lukas – Coin Catalog Project
+</footer>
+
 </body>
 </html>
