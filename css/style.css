@@ -38,10 +38,4 @@ header {
   max-height: 400px;
   overflow-y: auto;
 }
-:root {
-  bg-main: #0f172a;
-  bg-secondary: #1e293b;
-  accent: #c9a24d;
-  text-main: #e5e7eb;
-  text-muted: #94a3b8;
-}
+
