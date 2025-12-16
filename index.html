@@ -29,7 +29,6 @@
     </h1>
   </div>
 
-  <!-- Navigation -->
   <nav class="border-t border-slate-600">
     <ul class="flex justify-center gap-8 py-3 text-sm text-[var(--text-muted)]">
       <li><a href="#intro" class="hover:text-[var(--accent)]">Introduction</a></li>
@@ -49,10 +48,10 @@
   </div>
   
 <div>
-  <h1 class="text-2xl font-bold text-center">
+  <h1 class="text-2xl font-bold text-center border-t border-slate-600">
     The Collection
   </h1>
- <section id="coins" class="coins-grid mb-16 max-w-4xl mx-auto">
+ <div id="coins" class="coins-grid mb-16 max-w-4xl mx-auto">
     <article class="coin-card bg-[var(--bg-secondary)] p-4 rounded-xl text-left cursor-pointer" tabindex="0" data-alt="images/IMG_6357.jpeg">
       <img src="images/IMG_6356.jpeg" alt="1881 Silver Coin" class="rounded-lg mb-3 w-full object-cover">
       <h2 class="font-semibold text-[var(--text-main)]">1881 Morgan Dollar</h2>
@@ -166,13 +165,13 @@
       <p>This Danish 25 Øre coin was minted shortly after World War I during a period of economic adjustment. Smaller silver denominations like this were gradually phased out as silver became too valuable for everyday coinage.</p>
     </article>
    
-  </section>
+  </div>
 </div>
 <div>
-  <h1 class="text-2xl font-bold text-center">
+  <h1 class="text-2xl font-bold text-center border-t border-slate-600">
     About Coin Collecting
   </h1>
- <section id="about" class="space-y-20 text-[var(--text-main)] max-w-4xl mx-auto scroll-mt-36">
+ <div id="about" class="space-y-20 text-[var(--text-main)] max-w-4xl mx-auto scroll-mt-36">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <p>
         Coin collecting is the hobby of gathering coins based on factors like age, country, design, or rarity.
@@ -191,7 +190,7 @@
       </p>
     </div>
 
-  </section>
+  </div>
 </div>
 
 </main>
@@ -223,6 +222,7 @@ document.querySelectorAll('.coin-card').forEach(card => {
 
 </body>
 </html>
+
 
 
 
