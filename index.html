@@ -20,16 +20,37 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[var(--bg-main)]">
 
-<header class="fixed top-0 w-full z-50 p-4 bg-[var(--bg-secondary)]">
-  <h1 class="text-2xl font-bold text-center text-[var(--text-main)]">My silver Coin Catalog</h1>
+<header class="fixed top-0 w-full z-50 bg-[var(--bg-secondary)]">
+  <div class="p-4">
+    <h1 class="text-2xl font-bold text-center text-[var(--text-main)]">
+      My Silver Coin Catalog
+    </h1>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="border-t border-slate-600">
+    <ul class="flex justify-center gap-8 py-3 text-sm text-[var(--text-muted)]">
+      <li><a href="#intro" class="hover:text-[var(--accent)]">Introduction</a></li>
+      <li><a href="#coins" class="hover:text-[var(--accent)]">Collection</a></li>
+      <li><a href="#about" class="hover:text-[var(--accent)]">About the Hobby</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main class="pt-24 px-6">
+<main class="pt-36 px-6">
 
   <!-- Intro -->
-  <section class="max-w-4xl mx-auto mb-12">
+  <section id="intro" class="max-w-4xl mx-auto mb-16 scroll-mt-36">
+    <p class="text-lg text-center text-[var(--text-muted)]">
+      One of my favorite things to do during my free time is spending money on money, I collect all kinds of currency, from bills printed during hyperinflation to ancient hammer-struck coins of dead conquerors.
+      More than all of them, I particularly enjoy collecting silver coins. This website is a short catalog of my personal favorite silver coins I own.
+    </p>
+  </section>
+
+  <!-- Coin Grid -->
+  <section id="coins" class="coins-grid mb-20 max-w-4xl mx-auto scroll-mt-36">
     <p class="text-lg text-center text-[var(--text-muted)]">
       One of my favorite things to do during my free time is spending money on money, I collect all kinds of currency, from bills printed during hyperinflation to ancient hammer-struck coins of dead conquorors. 
       But more than all of them, I particulary enjoy collelcting silver coins, This website here is a short catalog of my personal favorite silver coins I own.
@@ -154,47 +175,45 @@
       <p>This Danish 25 Øre coin was minted shortly after World War I during a period of economic adjustment. Smaller silver denominations like this were gradually phased out as silver became too valuable for everyday coinage.</p>
     </button>
 
-
   </section>
 
-  <!-- Info Blocks -->
-  <section class="space-y-20 text-[var(--text-main)] max-w-4xl mx-auto">
+ <section id="about" class="space-y-20 text-[var(--text-main)] max-w-4xl mx-auto scroll-mt-36">
 
     <div class="grid md:grid-cols-2 gap-8 items-center">
-      <p>Coin collecting is the hobby of gathering coins based on factors like age, country, design, or rarity. I do it because I’m interested in learning about different currencies and their historical or monetary value. It’s a way to organize and study, and sometimes it can also be an investment if certain coins become valuable over time, which is espacially true for silver coins!</p>
+      <p>
+        Coin collecting is the hobby of gathering coins based on factors like age, country, design, or rarity.
+        I do it because I’m interested in learning about different currencies and their historical or monetary value.
+        It’s a way to organize and study, and sometimes it can also be an investment, especially with silver coins.
+      </p>
       <img src="images/coinscoins.png" alt="Coin collecting" class="rounded-xl">
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <img src="images/coinmeme.jpg" alt="Why collect coins" class="rounded-xl">
-      <p>Coin collecting works by obtaining coins through various sources like circulation, coin dealers, online marketplaces, or coin shows, and then organizing them based on criteria such as country, year, mint mark, or condition. I usually target particulary worn coins, which while isn't as valuable, I find them far more interesting as each one tells far more of a story. Most collectors often use reference guides or catalogs to identify coins and track their collections, and some also trade or sell coins to complete sets or acquire rare pieces.</p>
+      <p>
+        Coin collecting works by obtaining coins through circulation, dealers, online marketplaces, or coin shows,
+        then organizing them by country, year, mint mark, or condition.
+        I prefer heavily worn coins, as they tend to tell more of a story than pristine examples.
+      </p>
     </div>
-
-
 
   </section>
 
 </main>
 
-<footer class="mt-20 p-6 text-center text-sm text-[var(--text-muted)]">
+  <footer class="mt-20 p-6 text-center text-sm text-[var(--text-muted)]">
   © 2025 Lukas – Coin Catalog Project
 </footer>
-
 
 <script>
   document.querySelectorAll('.coin-card').forEach(card => {
     const img = card.querySelector('img');
-
     if (!img || !card.dataset.alt) return;
 
-    card.addEventListener('click', (e) => {
-     
+    card.addEventListener('click', e => {
       e.preventDefault();
-
-     
       const currentSrc = img.getAttribute('src');
       const altSrc = card.dataset.alt;
-
       img.setAttribute('src', altSrc);
       card.dataset.alt = currentSrc;
     });
@@ -203,7 +222,3 @@
 
 </body>
 </html>
-
-
-
-
